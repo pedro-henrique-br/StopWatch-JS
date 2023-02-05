@@ -1,4 +1,5 @@
-*{
+*
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,12 +7,12 @@
 
 @font-face {
   font-family: montserrat1;
-  src: url('/assets/monstserrat/static/Montserrat-BoldItalic.ttf') format('opentype');
+  src: url('/Cronometro-js/assets/monstserrat/static/Montserrat-BoldItalic.ttf') format('opentype');
 }
 
 @font-face {
   font-family: montserrat;
-  src: url('/assets/monstserrat/static/Montserrat-SemiBoldItalic.ttf') format('opentype');
+  src: url('/Cronometro-js/assets/monstserrat/static/Montserrat-SemiBoldItalic.ttf') format('opentype');
 }
 
 
@@ -27,14 +28,14 @@ body {
   text-align: center;
 }
 
-.container{
+.container {
   width: 35vw;
   height: 23vh;
   border-radius: 25px;
   background-color: rgb(101, 101, 101);
 }
 
-#timer {
+#timerDisplay {
   padding-top: 30px;
   font-family: montserrat;
   color: rgb(40, 40, 40);

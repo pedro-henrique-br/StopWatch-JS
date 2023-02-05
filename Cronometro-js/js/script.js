@@ -1,22 +1,18 @@
 let timer 
 
-let zero = "0";
+let milliseconds = 0;
 let seconds = 0;
 let minutes = 0;
-let hours = 0;
 let myInterval;
 
-function myDigit (digit) {
-  if(10 > digit){
-    return ("0" + digit)
-  }
-  else{
-    return digit
-  } 
+function addDigit (CurrentTime) {
+  if(10 > CurrentTime){
+    return ("0" + CurrentTime)}
+  return CurrentTime
 }
 
 function start () {
-  myInterval = setInterval(interval, 1000)
+  myInterval = setInterval(interval, 10)
 }
 
 function pause () {
@@ -25,25 +21,24 @@ function pause () {
 
 function stop () {
   clearInterval(myInterval)
-  timer = document.getElementById("timer")
+  timer = document.getElementById("timerDisplay")
   timer.innerHTML = "00:00:00"
-  seconds= 0;
+  milliseconds = 0;
   seconds = 0;
   minutes = 0;
-  hours = 0;
 }
 
 function interval () {
-  seconds++
-  if(seconds == 60){
-    minutes++
-    seconds = 0
-      if(minutes == 60){
-        hours ++
-        minutes = 0;
-}
-}
+  milliseconds++
+  if(milliseconds == 60){
+    seconds++
+    milliseconds = 0
+      if(seconds == 60){
+        minutes ++
+        seconds = 0;
+      }
+    }    
   
-  timer = document.getElementById("timer")
-  timer.innerHTML = myDigit(hours)+":"+myDigit(minutes)+":"+myDigit(seconds)
+timer = document.getElementById("timerDisplay")
+timer.innerHTML = addDigit(minutes)+":"+addDigit(seconds)+":"+addDigit(milliseconds)
 }
