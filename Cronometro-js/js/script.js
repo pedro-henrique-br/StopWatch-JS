@@ -38,7 +38,6 @@ function interval () {
         seconds = 0;
       }
     }    
-  
-timer = document.getElementById("timerDisplay")
-timer.innerHTML = addDigit(minutes)+":"+addDigit(seconds)+":"+addDigit(milliseconds)
+  timer = document.getElementById("timerDisplay")
+  timer.innerHTML = addDigit(minutes)+":"+addDigit(seconds)+":"+addDigit(milliseconds)
 }
